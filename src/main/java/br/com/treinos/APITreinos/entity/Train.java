@@ -27,19 +27,27 @@ public class Train {
         this.weekDate = weekDate;
     }
 
-    public Long getId() {
-        return id;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Exercise> getExercises() {
         return exercises;
     }
 
+    public void setExercises(List<Exercise> exercises) {
+        this.exercises = exercises;
+    }
+
     public String getWeekDate() {
         return weekDate;
+    }
+
+    public void setWeekDate(String weekDate) {
+        this.weekDate = weekDate;
     }
 }

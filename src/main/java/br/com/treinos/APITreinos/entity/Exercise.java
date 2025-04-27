@@ -26,27 +26,43 @@ public class Exercise {
         this.trains = Exercise.this.trains;
     }
 
-    public Long getId() {
-        return id;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Integer getRepetitions() {
         return repetitions;
     }
 
+    public void setRepetitions(Integer repetitions) {
+        this.repetitions = repetitions;
+    }
+
     public Double getLoad() {
         return load;
+    }
+
+    public void setLoad(Double load) {
+        this.load = load;
     }
 
     public Double getRestTime() {
         return restTime;
     }
 
+    public void setRestTime(Double restTime) {
+        this.restTime = restTime;
+    }
+
     public List<Train> getTrains() {
         return trains;
+    }
+
+    public void setTrains(List<Train> trains) {
+        this.trains = trains;
     }
 }
