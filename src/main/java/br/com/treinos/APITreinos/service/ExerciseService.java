@@ -2,7 +2,6 @@ package br.com.treinos.APITreinos.service;
 
 import br.com.treinos.APITreinos.entity.Exercise;
 import br.com.treinos.APITreinos.repository.ExerciseRepository;
-import br.com.treinos.APITreinos.repository.TrainRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,7 +41,6 @@ public class ExerciseService {
             exercise.setName(updatedExercise.getName());
             exercise.setLoad(updatedExercise.getLoad());
             exercise.setRepetitions(updatedExercise.getRepetitions());
-            exercise.setTrains(updatedExercise.getTrains());
             exercise.setRestTime(updatedExercise.getRestTime());
 
             return exerciseRepository.save(exercise);

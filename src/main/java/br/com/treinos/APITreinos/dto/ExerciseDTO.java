@@ -1,15 +1,13 @@
-package br.com.treinos.APITreinos.entity;
+package br.com.treinos.APITreinos.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
+public class ExerciseDTO {
 
-@Entity
-public class Exercise {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
     @Getter
     @Setter
     private String name;
@@ -23,9 +21,9 @@ public class Exercise {
     @Setter
     private Double restTime; //rest time calculated in seconds
 
-    public Exercise(){}
+    public ExerciseDTO(){}
 
-    public Exercise(String name, Integer repetitions, Double load, Double restTime) {
+    public ExerciseDTO(String name, Integer repetitions, Double load, Double restTime) {
         this.name = name;
         this.repetitions = repetitions;
         this.load = load;

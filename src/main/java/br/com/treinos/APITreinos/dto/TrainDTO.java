@@ -1,30 +1,29 @@
-package br.com.treinos.APITreinos.entity;
+package br.com.treinos.APITreinos.dto;
 
-import jakarta.persistence.*;
+import br.com.treinos.APITreinos.entity.Exercise;
+import br.com.treinos.APITreinos.entity.Train;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 
-@Entity
-public class Train {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+public class TrainDTO {
     @Getter
     @Setter
     private String name;
     @Getter
     @Setter
     @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Exercise> exercises;
+    private List<ExerciseDTO> exercises;
     @Getter
     @Setter
     private String weekDate;
 
-    public Train(){}
+    public TrainDTO(){}
 
-    public Train(String name, List<Exercise> exercises, String weekDate) {
+    public TrainDTO(String name, List<ExerciseDTO> exercises, String weekDate) {
         this.name = name;
         this.exercises = exercises;
         this.weekDate = weekDate;
